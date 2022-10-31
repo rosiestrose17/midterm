@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+     
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%; 
+}
+.logoo {
+    cursor: pointer;
+
+}
+.nav__links {
+    color: aliceblue;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: larger;
+
+}
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a {
+    transition: all 0.3s ease;
+}
+.nav__links li a hover {
+    color: red;
+}
+button {
+    padding: 9px 25px;
+    background-color: rgb(124, 97, 211);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+}
+button:hover {
+    background-color: rgb(138, 114, 193);
+}
+body {
+    height: 100vh;
+    background: 
+      linear-gradient(
+                      rgb(212, 202, 250),
+                      rgb(180, 219, 253),
+                      rgb(255, 252, 241),
+                      rgb(253, 213, 215)
+                     );
+                     background-repeat: no-repeat;
+                     background-size: cover;
+
+  }
+  
+
+h1.rosie {
+    display: flex;
+    font: 700%;
+    margin-top: 1px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+h1.h1 {
+
+    color: rgb(0, 0, 0);
+    font-size: 500%;
+    text-align: center;
+    letter-spacing: 10px;
+    line-height: 2
+    
+    }
+h2 {
+        color:rgb(63, 71, 78);
+        text-align: center;
+        font-size: 400%;
+        font-weight: lighter;
+        line-height: 50px;
+
+    }
+h3 {
+        color:rgb(63, 71, 78);
+        text-align: center;
+        font-size: 400%;
+        font-weight: lighter;
+        line-height: 120px;
+    }
+    div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
