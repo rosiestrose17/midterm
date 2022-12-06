@@ -1,120 +1,220 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-
-* {box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-     
-}
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%; 
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
 }
 .logoo {
-    cursor: pointer;
-
+  cursor: pointer;
 }
 .nav__links {
-    color: aliceblue;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: larger;
-
+  list-style: none;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: larger;
 }
 .nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 20px;
 }
 .nav__links li a {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
-.nav__links li a hover {
-    color: red;
+.nav__links li a:hover {
+  color: pink;
 }
 button {
-    padding: 9px 25px;
-    background-color: rgb(124, 97, 211);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: "Montserrat", sans-serif;
-    font-size: larger;
+  padding: 9px 25px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
 }
 button:hover {
-    background-color: rgb(138, 114, 193);
+  background-color: rgb(120, 120, 120);
 }
-body {
-    height: 100vh;
-    background: 
-      linear-gradient(
-                      rgb(212, 202, 250),
-                      rgb(180, 219, 253),
-                      rgb(255, 252, 241),
-                      rgb(253, 213, 215)
-                     );
-                     background-repeat: no-repeat;
-                     background-size: cover;
 
-  }
-  
-
-h1.rosie {
-    display: flex;
-    font: 700%;
-    margin-top: 1px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
+.intro {
+  display: flex;
+  height: calc(100vh - 130px);
 }
-h1.h1 {
 
-    color: rgb(0, 0, 0);
-    font-size: 500%;
-    text-align: center;
-    letter-spacing: 10px;
-    line-height: 2
-    
-    }
-h2 {
-        color:rgb(63, 71, 78);
-        text-align: center;
-        font-size: 400%;
-        font-weight: lighter;
-        line-height: 50px;
+.intro .rosie {
+  width: 50%;
+}
 
-    }
-h3 {
-        color:rgb(63, 71, 78);
-        text-align: center;
-        font-size: 400%;
-        font-weight: lighter;
-        line-height: 120px;
-    }
-    div.gallery {
-        margin: 5px;
-        border: 1px solid #ccc;
-        float: left;
-        width: 180px;
-      }
-      
-      div.gallery:hover {
-        border: 1px solid #777;
-      }
-      
-      div.gallery img {
-        width: 100%;
-        height: auto;
-      }
-      
-      div.desc {
-        padding: 15px;
-        text-align: center;
-      }
+.intro .rosie img {
+  width: 80%;
+}
+
+.intro .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: stretch;
+  padding-left: 50px;
+}
+
+.intro .content .intro-header {
+  font-family: "palmtick", sans-serif;
+  font-size: 90px;
+  margin-bottom: 10px;
+  text-shadow: 5px 5px rgb(235, 190, 197);
+  line-height: 100px;
+  letter-spacing: 15px;
+}
+
+.introduction {
+  margin-top: 20px;
+  font-size: 45px;
+  line-height: 60px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 40px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.work {
+  background-color: black;
+}
+.work-title {
+  font-family: "Lulo Clean", sans-serif;
+  color: white;
+  font-size: 150%;
+  text-align: center;
+  line-height: 70px;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.column:hover .image {
+  opacity: 0.3;
+}
+
+.column:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.work-title {
+  color: white;
+  text-shadow: 2px 2px 8px violet;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+.desc {
+  padding: 15px;
+  text-align: center;
+  color: azure;
+  font-family: "Lulo Clean", sans-serif;
+  font-size: 150%;
+}
+.middle {
+  visibility: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+}
+.column:hover .middle {
+  visibility: visible;
+  opacity: 1;
+}
+.grid {
+  display: grid;
+  grid-template-columns: calc(66% - 5px) calc(34% - 5px);
+  grid-template-rows: calc(50% - 5px) calc(50% - 5px);
+  grid-gap: 10px;
+}
+
+.grid .left {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 2;
+  padding-top: 75px;
+}
+
+.grid .upper_right {
+  grid-column: 2 / 2;
+  grid-row: 1 / 2;
+}
+
+.grid .lower_right {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+.grid {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+view {
+  padding: 9px 25px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+}
+view:hover {
+  background-color: rgb(120, 120, 120);
+}
+.recent-title {
+  padding-left: 270px;
+  font-size: 250%;
+  line-height: 90px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.gradient-text {
+  padding-top: 50px;
+  background-image: linear-gradient(70deg, #ffffff, #000000);
+  background-size: 80%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 50px;
+  font-size: 500%;
+  text-align: center;
+}
+.upcoming-img {
+  display: block;
+  margin-left: 420px;
+  padding: 10px;
+}
